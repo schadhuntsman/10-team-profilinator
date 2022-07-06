@@ -1,4 +1,4 @@
-const { managerPrompt } = require("../app");
+const { managerPrompt } = require("./app");
 
 const template = () => {
 return `
