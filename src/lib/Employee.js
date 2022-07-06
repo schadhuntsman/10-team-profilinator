@@ -23,17 +23,7 @@ getEmail() {
 getRole() {
     return "Employee";
 }
-    // Show() {
-    //     return this.present() + ', their Employee ID number is: ' + this.id;
-    // }
-    // class Email extends Employee {
-    //     constructor(this.id, this.email)
-    //     super.Id;
-    //     this.id = Id;
-    // }
-    // Show() {
-    //     return this.present() + ', their Employee ID number is: ' + this.id;
-    // }
+   
      
 };
 
