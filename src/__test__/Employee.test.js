@@ -13,13 +13,13 @@ test('to see if we can use get the name from the getName()', () => {
 })
 
 test('try to get the email with getEmail()', () => {
-    expect(employee.getEmail()).toBe('freddybadelly@gmail.com')
+    expect(employee.getEmail()).toBe('freddybadelly@gmail.com');
 });
 
 test('try to get employee id through the getId()', () => {
-    expect(employee.getId).toBe(666);
+    expect(employee.getId()).toBe('666');
 });
 
 test('try to get role with getRole()', () => {
-    expect(employee.getRole).toBe('Employee')
+    expect(employee.getRole()).toBe('Employee');
 })
