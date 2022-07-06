@@ -1,6 +1,15 @@
-const { managerPrompt } = require("./app");
+const teamProfilinate = (teamPrint) => {
+  const documentHtml = [];
+  const managerPageCreator = manager => {
+    let htmlMngr = `
+    <div class="card">
+    <div class="card-display">
+    ${manager.name}`
+  }
+}
 
-const template = () => {
+module.exports = teamPrint => {
+
 return `
 <!DOCTYPE html>
 <html lang="en">
@@ -9,18 +18,22 @@ return `
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portfolio Demo</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="../src/dist/style.css" />
+  <title>Team Profilinator</title>
 </head>
 
 <body>
+<header>
+<h1>Team Profilinator</h1>
+</header>
 
-<h2>JavaScript Class Inheritance</h2>
- ${managerPrompt}
-<p>Use the "extends" keyword to inherit all methods from another class.</p>
-<p>Use the "super" method to call the parent's constructor function.</p>
+<main>
+ ${teamProfilinate(teamPrint)}
+</main>
+
 </body>
 </html>
 `;

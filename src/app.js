@@ -7,11 +7,11 @@ const infoSave = [];
 const template = require('./template');
 const path = require('path');
 const Manager = require('../lib/Manager');
-const Employee = require('../lib/Employee');
+// const Employee = require('../lib/Employee');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const OUTPUT_DIR = path.resolve(__dirname, "output")
-const outputPath = path.join(OUTPUT_DIR, "team.html")
+const outputPath = path.join(OUTPUT_DIR, "teamPrint.html")
 
 
 const managerPrompt = () => {
@@ -76,6 +76,7 @@ const teamSelection = () => {
   `);
   fs.writeDocument(outputPath, template(infoSave), "utf-8");
 }
+managerPrompt();
 
 const engineerSelection = () => {
   console.log(`
