@@ -4,8 +4,15 @@ const teamProfilinate = (teamPrint) => {
     let htmlMngr = `
     <div class="card">
     <div class="card-display">
-    ${manager.name}`
-  }
+    ${manager.name}
+    <i class="manager"</div>
+    <ul class="list">
+    <li class="list-element">ID: ${manager.id}</li>
+    <li class="list-element">Email: <h3 id="email"><a href="mailto:${manager.email}">${manager.email}</a></li>
+    <li class="list-element">Office Number: ${manager.officeNumber}</li>
+    </ul>
+    </div>
+    `}
 }
 
 module.exports = teamPrint => {
