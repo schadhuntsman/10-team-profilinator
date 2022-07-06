@@ -1,47 +1,28 @@
-const managerPrompt = require('./src/app.js');
+
 const fs = require('fs')
 const inquirer = require('inquirer');
 
 
 //name id email getName() getId() getEmail() getRole() 
 class Employee {
-    constructor(employee) {
-        this.name = 'Fredforth';
-        this.id = '33';
-        this.email = 'fred@mail.com';
-    },
-    {
-        this.name = 'Fredforth';
-        this.id = '33';
-        this.email = 'fred@mail.com';
-    },
-    {
-        this.name = 'Fredforth';
-        this.id = '33';
-        this.email = 'fred@mail.com';
-    },
-    {
-        this.name = 'Fredforth';
-        this.id = '33';
-        this.email = 'fred@mail.com';
-    },
-    {
-        this.name = 'Fredforth';
-        this.id = '33';
-        this.email = 'fred@mail.com';
+    constructor(name, id, email) {
+        this.name = name;
+        this.id = id;
+        this.email = email;
     }
-    present() {
-        return 'Employee name is' + this.name;
-    }
-
-    class Id extends Employee {
-        constructor(this.id, this.email)
-        super(Id);
-        this.id = Id;
-        this.email = Email;
-        this.name = Name;
-
-    }
+    
+getName() {
+    return this.name;
+}
+getId() {
+    return this.id;
+}
+getEmail() {
+    return this.email;
+}
+getRole() {
+    return "Employee";
+}
     // Show() {
     //     return this.present() + ', their Employee ID number is: ' + this.id;
     // }
@@ -55,3 +36,5 @@ class Employee {
     // }
      
 };
+
+module.exports = Employee;
