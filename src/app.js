@@ -110,7 +110,7 @@ return inquirer.prompt([
       message: 'Enter your GitHub username'
       },   
 ]).then(answers) => {
-  const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitGitHubId, answers.gitHubUsername);
+  const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitHubId, answers.gitHubUsername);
   infoSave.push(engineer);
 
   selectionMenu();

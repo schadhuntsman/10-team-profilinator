@@ -1,7 +1,7 @@
 const teamProfilinate = (teamPrint) => {
   const documentHtml = [];
   const managerPageCreator = manager => {
-    let htmlMngr = `
+    let htmlManager = `
     <div class="card">
     <div class="card-display">
     ${manager.name}
@@ -12,9 +12,24 @@ const teamProfilinate = (teamPrint) => {
     <li class="list-element">Office Number: ${manager.officeNumber}</li>
     </ul>
     </div>
-    `}
+    `
+    html.push(htmlManager);
 }
-
+const engineerPageCreator = engineer => {
+  let htmlEngineer = `
+  <div class="card">
+  <div class="card-display">
+  ${engineer.name}
+  <i class="engineer"</div>
+  <ul class="list">
+  <li class="list-element">ID: ${engineer.id}</li>
+  <li class="list-element">Email: <h3 id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></li>
+  <li class="list-element">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">${engineer.gi<tHubUsername}</a></li>
+  </ul>
+  </div>
+  `;
+  html.push(htmlEngineer);
+}
 module.exports = teamPrint => {
 
 return `
