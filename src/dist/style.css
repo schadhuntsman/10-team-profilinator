@@ -7,5 +7,15 @@
 }
 
 .list-element {
-    
+
+}
+
+header {
+    background-color: salmon;
+    text-align: center;
+}
+
+.card-display {
+    background-color: dodgerblue;
+    color: white;
 }

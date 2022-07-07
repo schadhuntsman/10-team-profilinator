@@ -1,6 +1,6 @@
 
-const fs = require('fs')
-const inquirer = require('inquirer');
+// const fs = require('fs')
+// const inquirer = require('inquirer');
 
 
 //name id email getName() getId() getEmail() getRole() 
@@ -11,18 +11,21 @@ class Employee {
         this.email = email;
     }
     
-getName() {
-    return this.name;
-}
-getId() {
-    return this.id;
-}
-getEmail() {
-    return this.email;
-}
-getRole() {
-    return "Employee";
-}
+    getName() {
+        return this.name;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    getEmail() {
+        return this.email;
+    }
+    
+    getRole() {
+        return "Employee";
+    }
    
      
 };

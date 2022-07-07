@@ -40,13 +40,14 @@ const managerPrompt = () => {
         },   
       ])
 
-      .then(answers) => {
+      .then(answers =>  {
       const manager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
       infoSave.push(manager);
 
       selectionMenu();
 
-      };
+      })
+    };
 
 const selectionMenu = () => {
   return inquirer.prompt([{
@@ -74,8 +75,14 @@ const teamSelection = () => {
   console.log(`
  FINISH BUILDING YOUR TEAM
   `);
+  
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR)
+  }
   fs.writeDocument(outputPath, template(infoSave), "utf-8");
+
 }
+
 managerPrompt();
 
 const engineerSelection = () => {
@@ -109,13 +116,13 @@ return inquirer.prompt([
       name: 'gitHubUsername',
       message: 'Enter your GitHub username'
       },   
-]).then(answers) => {
+]).then(answers => {
   const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitHubId, answers.gitHubUsername);
   infoSave.push(engineer);
 
   selectionMenu();
 
-}
+})
 };
 //add school for intern
 
@@ -146,17 +153,13 @@ return inquirer.prompt([
     message: 'Enter the name of your school'
     }
 
-]).then(answers) => {
+]).then(answers => {
   const intern = new Intern(answers.name, answers.employeeId, answers.email, answers.school);
   infoSave.push(intern);
 
   selectionMenu();
 
-}
-};
-module.exports = {
-  managerPrompt:managerPrompt
-
+})
 };
 
 
