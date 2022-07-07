@@ -4,39 +4,72 @@ const infoSave = [];
 //generate html 
 //use bootstrap for html
 
-const template = require('./template');
+const template = require('../src/template');
 const path = require('path');
-const Manager = require('../lib/Manager');
+
+const Manager = require('../src/lib/Manager');
 // const Employee = require('../lib/Employee');
-const Engineer = require('../lib/Engineer');
-const Intern = require('../lib/Intern');
+const Engineer = require('../src/lib/Engineer');
+const Intern = require('../src/lib/Intern');
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "teamPrint.html")
 
 
 const managerPrompt = () => {
   
-  inquirer.prompt([
+  return inquirer.prompt([
       
         {
           type: 'input',
           name: 'name',
-          message: "Enter manager's name",          
+          message: "Enter manager's name", 
+          validate: name => {
+            if (name) {
+              return true;
+            } else {
+              console.log("Enter manager's name");
+              return false;
+            }
+          }           
         },
         {
           type: 'input',
           name: 'employeeId',
-          message: "Enter manager's ID",          
+          message: "Enter manager's ID", 
+          validate: employeeId => {
+            if (employeeId) {
+              return true;
+            } else {
+              console.log("Enter manager's ID");
+              return false;
+            }
+          }           
         },
         {
           type: 'input',
           name: 'email',
-          message: "Enter manager's e-mail address",          
+          message: "Enter manager's e-mail address", 
+          validate: email => {
+            if (email) {
+              return true;
+            } else {
+              console.log("Enter manager's e-mail address");
+              return false;
+            }
+          }           
         },
         {
           type: 'input',
           name: 'officeNumber',
-          message: "Enter manager's office number",          
+          message: "Enter manager's office number", 
+          validate: officeNumber => {
+            if (officeNumber) {
+              return true;
+            } else {
+              console.log("Enter manager's office number");
+              return false;
+            }
+          }         
         },   
       ])
 
@@ -50,40 +83,29 @@ const managerPrompt = () => {
     };
 
 const selectionMenu = () => {
-  return inquirer.prompt([{
+  return inquirer.prompt([
+    {
     type: 'list',
     name: 'home',
     message: 'Select one of the following choices to continue:',
-    choices: ['Engineer', 'Intern', 'Finish building your team']
+    choices: ['add an engineer', 'add an intern', 'finish building your team']
   }])
  .then(makeDecision => {
   switch (makeDecision.home) {
-    case "Would you like to add an engineer?":
+    case "add an engineer":
     engineerSelection();
 
-    case "Would you like to add an intern?":
+    case "add an intern":
       internSelection();
 
-    case "Finish building your team":
+    case "finish building your team":
       teamSelection();
 
   }
  });
 };
 
-const teamSelection = () => {
-  console.log(`
- FINISH BUILDING YOUR TEAM
-  `);
-  
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR)
-  }
-  fs.writeDocument(outputPath, template(infoSave), "utf-8");
 
-}
-
-managerPrompt();
 
 const engineerSelection = () => {
   console.log(`
@@ -94,27 +116,67 @@ return inquirer.prompt([
   {
   type: 'input',
   name: 'name',
-  message: 'Enter the name of the engineer'
+  message: 'Enter the name of the engineer',
+  validate: nameEngineer => {
+    if (nameEngineer) {
+      return true;
+    } else {
+      console.log("Enter the name of the engineer");
+      return false;
+    }
+  }         
   },
   {
   type: 'input',
   name: 'id',
-  message: 'Enter id number'
+  message: 'Enter id number',
+  validate: employeeId => {
+    if (employeeId) {
+      return true;
+    } else {
+      console.log("Enter id number");
+      return false;
+    }
+  }         
   },
   {
   type: 'input',
   name: 'email',
-  message: 'Enter your email address'
+  message: 'Enter your email address',
+  validate: email => {
+    if (email) {
+      return true;
+    } else {
+      console.log("Enter your email address");
+      return false;
+    }
+  }         
   },
   {
     type: 'input',
     name: 'gitHubId',
-    message: 'Enter your GitHub ID'
+    message: 'Enter your GitHub ID',
+    validate: gitHubId => {
+      if (gitHubId) {
+        return true;
+      } else {
+        console.log("Enter your GitHub ID");
+        return false;
+      }
+    }         
     },
     {
       type: 'input',
       name: 'gitHubUsername',
-      message: 'Enter your GitHub username'
+      message: 'Enter your GitHub username',
+      validate: gitHubUsername => {
+        if (gitHubUsername) {
+          return true;
+        } else {
+          console.log("Enter your GitHub username");
+          return false;
+        }
+      }         
       },   
 ]).then(answers => {
   const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitHubId, answers.gitHubUsername);
@@ -135,22 +197,54 @@ return inquirer.prompt([
   {
   type: 'input',
   name: 'name',
-  message: 'Enter the name of the intern'
+  message: 'Enter the name of the intern',
+  validate: nameIntern => {
+    if (nameIntern) {
+      return true;
+    } else {
+      console.log("Enter the name of the intern");
+      return false;
+    }
+  }         
   },
   {
   type: 'input',
   name: 'id',
-  message: 'Enter id number'
+  message: 'Enter id number',
+  validate: employeeId => {
+    if (employeeId) {
+      return true;
+    } else {
+      console.log("Enter id number");
+      return false;
+    }
+  }         
   },
   {
   type: 'input',
   name: 'email',
-  message: 'Enter your email address'
+  message: 'Enter your email address',
+  validate: email => {
+    if (email) {
+      return true;
+    } else {
+      console.log("Enter your email address");
+      return false;
+    }
+  }         
   },
   {
     type: 'input',
     name: 'school',
-    message: 'Enter the name of your school'
+    message: 'Enter the name of your school',
+    validate: school => {
+      if (school) {
+        return true;
+      } else {
+        console.log("Enter the name of your school");
+        return false;
+      }
+    }         
     }
 
 ]).then(answers => {
@@ -161,7 +255,17 @@ return inquirer.prompt([
 
 })
 };
+const teamSelection = () => {
+  console.log(`
+ FINISH BUILDING YOUR TEAM
+  `);
+  
+  if (!fs.existsSync(OUTPUT_DIR)) {
+      fs.mkdirSync(OUTPUT_DIR)
+  }
+  fs.writeFileSync(outputPath, template(infoSave), "utf-8");
 
+}
 
 managerPrompt();
 

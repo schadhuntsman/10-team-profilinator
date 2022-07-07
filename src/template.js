@@ -1,69 +1,71 @@
 const teamProfilinate = (teamPrint) => {
-  
-  const documentHtml = [];
-  
+  console.log(teamPrint);
+  const html = [];
+
   const managerPageCreator = manager => {
     let htmlManager = `
     <div class="card">
-    <div class="card-display">
-    ${manager.name}
-    <i class="manager"</div>
-    <ul class="list">
-    <li class="list-element">ID: ${manager.id}</li>
-    <li class="list-element">Email: <h3 id="email"><a href="mailto:${manager.email}">${manager.email}</a></li>
-    <li class="list-element">Office Number: ${manager.officeNumber}</li>
-    </ul>
+      <div class="card-display">
+      ${manager.name}
+      <i class="manager">Manager</div>
+      <ul class="list">
+      <li class="list-element">ID: ${manager.id}</li>
+      <li class="list-element">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+      <li class="list-element">Office Number: ${manager.officeNumber}</li>
+      </ul>
     </div>
-    `
-    documentHtml.push(htmlManager);
-}
-const engineerPageCreator = engineer => {
-  let htmlEngineer = `
+    `;
+    html.push(htmlManager);
+  }
+  const engineerPageCreator = engineer => {
+    let htmlEngineer = `
   <div class="card">
   <div class="card-display">
   ${engineer.name}
   <i class="engineer"</div>
   <ul class="list">
   <li class="list-element">ID: ${engineer.id}</li>
-  <li class="list-element">Email: <h3 id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></li>
-  <li class="list-element">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">${engineer.gi<tHubUsername}</a></li>
+  <li class="list-element">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+  <li class="list-element">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">${engineer.gi < tHubUsername}</a></li>
   </ul>
   </div>
   `;
-  documentHtml.push(htmlEngineer);
-}
-const internPageCreator = intern => {
-  let htmlIntern = `
+    html.push(htmlEngineer);
+  }
+  const internPageCreator = intern => {
+    let htmlIntern = `
   <div class="card">
   <div class="card-display">
   ${intern.name}
   <i class="intern"</div>
   <ul class="list">
   <li class="list-element">ID: ${intern.id}</li>
-  <li class="list-element">Email: <h3 id="email"><a href="mailto:${intern.email}">${intern.email}</a></li>
+  <li class="list-element">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
   <li class="list-element">School: ${intern.school}</li>
   </ul>
   </div>
   `;
-  documentHtml.push(htmlIntern);
-}
+    html.push(htmlIntern);
+  }
 
-    for (let i = 0; i < teamPrint.length; i++) {
-        if (teamPrint[i].getRole() === 'Intern'){
-        internPageCreator(teamPrint[i]);
-        }
-        if (teamPrint[i].getRole() === 'Engineer'){
-          engineerPageCreator(teamPrint[i]);
-        }
-        if (teamPrint[i].getRole() === 'Manager'){
-          managerPageCreator(teamPrint[i]);
-        }
-    return documentHtml.join('');
-}
-}
+  for (let i = 0; i < teamPrint.length; i++) {
+    
+    if (teamPrint[i].getRole() === 'Manager') {
+      managerPageCreator(teamPrint[i]);
+    }
+    if (teamPrint[i].getRole() === 'Engineer') {
+      engineerPageCreator(teamPrint[i]);
+    }
+    if (teamPrint[i].getRole() === 'Intern') {
+      internPageCreator(teamPrint[i]);
+    }
+  }
+    return html.join('');
+  }
+
 module.exports = teamPrint => {
 
-return `
+  return `
 <!DOCTYPE html>
 <html lang="en">
 

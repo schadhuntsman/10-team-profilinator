@@ -1,4 +1,4 @@
-const Engineer = require('../lib/Engineer');
+const Engineer = require('../src/lib/Engineer');
 const engineer = new Engineer('Nerdelbaum Frink Jr II', '777', 'nerdamajig@gmail.com');
 
 test('check if info from the engineer constructor are displayed', () => {
