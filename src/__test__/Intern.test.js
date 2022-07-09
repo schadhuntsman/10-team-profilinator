@@ -1,5 +1,6 @@
-const Intern = require('../src/lib/Intern');
+const Intern = require('../lib/Intern');
 const intern = new Intern('Thing3', '333', 'Thingmanji@gmail.com');
+
 
 test('check if info from the constructor are displayed', () => {
     expect(intern.name).toBe('Thing3');

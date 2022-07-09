@@ -94,13 +94,13 @@ const selectionMenu = () => {
   switch (makeDecision.home) {
     case "add an engineer":
     engineerSelection();
-
+    break;
     case "add an intern":
       internSelection();
-
+      break;
     case "finish building your team":
       teamSelection();
-
+      break;
   }
  });
 };
@@ -109,7 +109,9 @@ const selectionMenu = () => {
 
 const engineerSelection = () => {
   console.log(`
+  ===================
   ADD A NEW ENGINEER
+  ===================
   `);
 
 return inquirer.prompt([
@@ -179,7 +181,7 @@ return inquirer.prompt([
       }         
       },   
 ]).then(answers => {
-  const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.gitHubId, answers.gitHubUsername);
+  const engineer = new Engineer(answers.name, answers.id, answers.email, answers.gitHubId, answers.gitHubUsername);
   infoSave.push(engineer);
 
   selectionMenu();
@@ -190,7 +192,9 @@ return inquirer.prompt([
 
 const internSelection = () => {
   console.log(`
+  ==================
   ADD A NEW INTERN
+  ==================
   `);
 
 return inquirer.prompt([
@@ -257,7 +261,9 @@ return inquirer.prompt([
 };
 const teamSelection = () => {
   console.log(`
+ ===========================
  FINISH BUILDING YOUR TEAM
+ ===========================
   `);
   
   if (!fs.existsSync(OUTPUT_DIR)) {

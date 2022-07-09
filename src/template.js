@@ -7,7 +7,7 @@ const teamProfilinate = (teamPrint) => {
     <div class="card">
       <div class="card-display">
       ${manager.name}
-      <i class="manager">Manager</div>
+      <i class="manager">Manager</i></div>
       <ul class="list">
       <li class="list-element">ID: ${manager.id}</li>
       <li class="list-element">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
@@ -22,11 +22,11 @@ const teamProfilinate = (teamPrint) => {
   <div class="card">
   <div class="card-display">
   ${engineer.name}
-  <i class="engineer"</div>
+  <i class="engineer">Engineer</i></div>
   <ul class="list">
   <li class="list-element">ID: ${engineer.id}</li>
   <li class="list-element">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-  <li class="list-element">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">${engineer.gi < tHubUsername}</a></li>
+  <li class="list-element">Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">${engineer.gitHubUsername}</a></li>
   </ul>
   </div>
   `;
@@ -37,7 +37,7 @@ const teamProfilinate = (teamPrint) => {
   <div class="card">
   <div class="card-display">
   ${intern.name}
-  <i class="intern"</div>
+  <i class="intern">Intern</i></div>
   <ul class="list">
   <li class="list-element">ID: ${intern.id}</li>
   <li class="list-element">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
@@ -49,7 +49,7 @@ const teamProfilinate = (teamPrint) => {
   }
 
   for (let i = 0; i < teamPrint.length; i++) {
-    
+
     if (teamPrint[i].getRole() === 'Manager') {
       managerPageCreator(teamPrint[i]);
     }
@@ -60,8 +60,8 @@ const teamProfilinate = (teamPrint) => {
       internPageCreator(teamPrint[i]);
     }
   }
-    return html.join('');
-  }
+  return html.join('');
+}
 
 module.exports = teamPrint => {
 
