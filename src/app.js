@@ -34,10 +34,10 @@ const managerPrompt = () => {
         },
         {
           type: 'input',
-          name: 'employeeId',
+          name: 'id',
           message: "Enter manager's ID", 
-          validate: employeeId => {
-            if (employeeId) {
+          validate: id => {
+            if (id) {
               return true;
             } else {
               console.log("Enter manager's ID");
@@ -74,7 +74,7 @@ const managerPrompt = () => {
       ])
 
       .then(answers =>  {
-      const manager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
+      const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
       infoSave.push(manager);
 
       selectionMenu();
@@ -132,8 +132,8 @@ return inquirer.prompt([
   type: 'input',
   name: 'id',
   message: 'Enter id number',
-  validate: employeeId => {
-    if (employeeId) {
+  validate: id => {
+    if (id) {
       return true;
     } else {
       console.log("Enter id number");
@@ -215,8 +215,8 @@ return inquirer.prompt([
   type: 'input',
   name: 'id',
   message: 'Enter id number',
-  validate: employeeId => {
-    if (employeeId) {
+  validate: id => {
+    if (id) {
       return true;
     } else {
       console.log("Enter id number");
@@ -252,7 +252,7 @@ return inquirer.prompt([
     }
 
 ]).then(answers => {
-  const intern = new Intern(answers.name, answers.employeeId, answers.email, answers.school);
+  const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
   infoSave.push(intern);
 
   selectionMenu();

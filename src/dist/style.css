@@ -1,18 +1,29 @@
 .card {
-    width: 20rem;
+    background-color: dodgerblue;
+    border-radius: 7px;
+    min-height: 18rem;
+    max-width: 18rem;
 }
 
 .list {
-
+    background-color: dodgerblue;
+    max-width: 18rem;
+    border-radius: 8px;
+    min-height: 18rem;
 }
 
 .list-element {
-
+  font-style: ;
 }
 
 header {
     background-color: salmon;
     text-align: center;
+}
+
+header h1 {
+    color:white
+    
 }
 
 .card-display {
