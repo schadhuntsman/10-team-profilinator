@@ -4,9 +4,9 @@ const infoSave = [];
 //generate html 
 //use bootstrap for html
 
-const template = require('../src/template');
+const generate-site = require('../src/generate-site');
 const path = require('path');
-
+const css = require('./dist/style.css');
 const Manager = require('../src/lib/Manager');
 // const Employee = require('../lib/Employee');
 const Engineer = require('../src/lib/Engineer');
@@ -269,7 +269,7 @@ const teamSelection = () => {
   if (!fs.existsSync(OUTPUT_DIR)) {
       fs.mkdirSync(OUTPUT_DIR)
   }
-  fs.writeFileSync(outputPath, template(infoSave), "utf-8");
+  fs.writeFileSync(outputPath, generate-site(infoSave), "utf-8");
 
 }
 
