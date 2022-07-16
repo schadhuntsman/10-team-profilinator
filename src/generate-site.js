@@ -19,7 +19,7 @@ const teamProfilinate = (teamPrint) => {
 
   const managerPageCreator = manager => {
     let htmlManager = `
-    <div class="grid-item card" style="width 18rem";>
+    <div class="grid-item card" style="width: 18rem";>
     <div class="card-body">
     <h5 class="card-header">${manager.name}</h5>
       <i class='fas fa-glasses' style='font-size:36px'></i>Manager</div>
@@ -34,7 +34,7 @@ const teamProfilinate = (teamPrint) => {
   }
   const engineerPageCreator = engineer => {
       let htmlEngineer = `
-      <div class="grid-item card" style="width 18rem";>
+      <div class="grid-item card" style="width: 18rem";>
       <div class="card-body">
       <h5 class="card-header">${engineer.name}</h5>
       <i class='fas fa-bahai'></i>Engineer</div>
@@ -50,7 +50,7 @@ const teamProfilinate = (teamPrint) => {
   }
   const internPageCreator = intern => {
     let htmlIntern = `
-        <div class="grid-item card" style="width 18rem;">
+        <div class="grid-item card" style="width: 18rem;">
           <div class="card-header">
           ${intern.name} <br/>         
           <i class="fas fa-graduation-cap"></i>Intern</div>
@@ -90,7 +90,7 @@ module.exports = teamPrint => {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" <link rel="stylesheet" href="./dist/style.css"> 
+  <link rel="stylesheet" href="../dist/style2.css"> 
   <title>Team Profilinator</title>
 </head>
 
@@ -103,8 +103,8 @@ module.exports = teamPrint => {
  ${teamProfilinate(teamPrint)}
 </main>
 
-<script src="jquery/jquery.min.js" style="text/javasciptt"></script>
-<script src="bootstrap/js/bootstrap.min.js" style="text/javasciptt"></script>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
 `;

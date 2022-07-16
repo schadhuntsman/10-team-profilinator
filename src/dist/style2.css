@@ -1,12 +1,15 @@
-html,
-.grid-container {
-    display:grid;
+header {
+    background-color: salmon;
+    text-align: center;
+} 
+ .grid-container {
+    display: grid;
     grid-template-columns: 20rem 20rem 20rem;
     grid-row-gap: 15px;
     grid-column-gap: 15px;
-}
+} 
 
-.grid-item {
+ .grid-item {
     width: 18rem;
     height: 20rem;
 }
@@ -18,28 +21,17 @@ html,
     max-width: 18rem;
 }
 
-.card-list {
-    background-color: dodgerblue;
-    max-width: 18rem;
-    border-radius: 8px;
-    min-height: 18rem;
-}
-
-/* .list-element {
+.list-element {
   font-style: 
-} */
+} 
 
-header {
-    background-color: salmon;
-    text-align: center;
-}
+
 
 header h1 {
-    color:white
-    
+    color:white 
 }
 
 .card-display {
     background-color: dodgerblue;
     color: white;
-}
+}    
