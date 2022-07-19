@@ -4,13 +4,13 @@ header {
 } 
  .grid-container {
     display: grid;
-    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-rows: 20rem 20rem 20rem;
     grid-row-gap: 15px;
     grid-column-gap: 15px;
 } 
 
  .grid-item {
-    width: 18rem;
+    /* width: 18rem; */
     height: 20rem;
 }
 
@@ -18,7 +18,7 @@ header {
     background-color: dodgerblue;
     border-radius: 7px;
     min-height: 18rem;
-    max-width: 18rem;
+    /* max-width: 18rem; */
 }
 
 .list-element {
