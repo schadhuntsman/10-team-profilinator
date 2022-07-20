@@ -19,14 +19,15 @@ const teamProfilinate = (teamPrint) => {
 
   const managerPageCreator = manager => {
     let htmlManager = `
-    <div class="grid-item card" style="width: 18rem";>
-    <div class="card-body">
-    <h5 class="card-header">${manager.name}</h5>
-      <i class='fas fa-glasses' style='font-size:36px'></i>Manager</div>
+      <div class="card" style="width: 18rem;">
+      <div class="card-header">
+      // <h5 class="card-header">${manager.name}</h5>
+      ${manager.name} <br/>
+      <i class='fas fa-glasses'></i>Manager</div>
       <ul class="list">
-      <li class="list-element">ID: ${manager.id}</li>
-      <li class="list-element">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-      <li class="list-element">Office Number: ${manager.officeNumber}</li>
+        <li class="list-element">ID: ${manager.id}</li>
+        <li class="list-element">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+        <li class="list-element">Office Number: ${manager.officeNumber}</li>
       </ul>
     </div>
     `;
@@ -34,9 +35,10 @@ const teamProfilinate = (teamPrint) => {
   }
   const engineerPageCreator = engineer => {
       let htmlEngineer = `
-      <div class="grid-item card" style="width: 18rem";>
-      <div class="card-body">
-      <h5 class="card-header">${engineer.name}</h5>
+      <div class="card" style="width: 18rem;">
+      <div class="card-header">
+      // <h5 class="card-header">${engineer.name}</h5>
+      ${engineer.name} <br>
       <i class='fas fa-bahai'></i>Engineer</div>
       <ul class="list">
           <li class="list-element">ID: ${engineer.id}</li>
@@ -50,7 +52,7 @@ const teamProfilinate = (teamPrint) => {
   }
   const internPageCreator = intern => {
     let htmlIntern = `
-        <div class="grid-item card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;">
           <div class="card-header">
           ${intern.name} <br/>         
           <i class="fas fa-graduation-cap"></i>Intern</div>
@@ -95,11 +97,11 @@ module.exports = teamPrint => {
 </head>
 
 <body>
-<header class="grid-container">
+<header>
 <h1>Team Profilinator</h1>
 </header>
 
-<main>
+<main class="grid-container">
  ${teamProfilinate(teamPrint)}
 </main>
 

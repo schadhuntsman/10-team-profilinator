@@ -4,9 +4,10 @@ header {
 } 
  .grid-container {
     display: grid;
-    grid-template-rows: 20rem 20rem 20rem;
-    grid-row-gap: 15px;
-    grid-column-gap: 15px;
+    grid-template-rows: 33% 33% 33%;
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    grid-auto-flow: row;
 } 
 
  .grid-item {
@@ -21,8 +22,14 @@ header {
     /* max-width: 18rem; */
 }
 
+.card-body {
+    background-color: white;   
+    
+}
+
 .list-element {
-  font-style: 
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  align-items: center;
 } 
 
 
@@ -31,7 +38,4 @@ header h1 {
     color:white 
 }
 
-.card-display {
-    background-color: dodgerblue;
-    color: white;
-}    
+
