@@ -4,7 +4,7 @@ header {
 } 
  .grid-container {
     display: grid;
-    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
     grid-row-gap: 2em;
     grid-column-gap: 2em;
     grid-auto-flow: row;
@@ -13,6 +13,7 @@ header {
  .grid-item {
     /* width: 18rem; */
     height: 20rem;
+    width: 18rem;
 }
 
 .card-header {
@@ -28,8 +29,9 @@ header {
 }
 
 .list-element {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  align-items: center;
+    list-style-type: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
 } 
 
 

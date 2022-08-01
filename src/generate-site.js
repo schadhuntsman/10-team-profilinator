@@ -21,9 +21,8 @@ const teamProfilinate = (teamPrint) => {
     let htmlManager = `
       <div class="card" style="width: 18rem;">
       <div class="card-header">
-      // <h5 class="card-header">${manager.name}</h5>
-      ${manager.name} <br/>
       <i class='fas fa-glasses'></i>Manager</div>
+      ${manager.name} <br/>
       <ul class="list">
         <li class="list-element">ID: ${manager.id}</li>
         <li class="list-element">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
@@ -54,8 +53,8 @@ const teamProfilinate = (teamPrint) => {
     let htmlIntern = `
         <div class="card" style="width: 18rem;">
           <div class="card-header">
-          ${intern.name} <br/>         
           <i class="fas fa-graduation-cap"></i>Intern</div>
+          ${intern.name} <br/>                 
           <ul class="card-list">
               <li class="list-element">ID: ${intern.id}</li>
               <li class="list-element">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
