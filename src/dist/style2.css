@@ -1,4 +1,4 @@
-header {
+/* header {
     background-color: salmon;
     text-align: center;
 } 
@@ -12,32 +12,31 @@ header {
 
  .grid-item {
     /* width: 18rem; */
-    height: 20rem;
+    /* height: 20rem;
     width: 18rem;
-}
-
+} */
+/* 
 .card-header {
     background-color: dodgerblue;
     border-radius: 7px;
-    min-height: 18rem;
+    min-height: 18rem; */
     /* max-width: 18rem; */
-}
+/* } */
 
-.card-body {
+/* .card-body {
     background-color: white;   
     
-}
+} */
 
-.list-element {
+/* .list-element {
     list-style-type: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     align-items: center;
-} 
+}  */
 
 
 
-header h1 {
+/* header h1 {
     color:white 
-}
 
-
+ */ 

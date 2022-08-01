@@ -1,0 +1,72 @@
+/* .header {
+    background-color: salmon;
+    text-align: center;
+}  */
+ .grid-container {
+    margin-right: 3rem;
+    justify-content: center;
+    align-content: center;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    /* grid-row-gap: 0em; */
+    grid-column-gap: 3.5rem;
+    grid-auto-flow: row;
+    margin-left: 1.4rem;
+} 
+
+ .grid-item {
+    height: 16rem;
+    width: 17rem;
+}
+
+.card-header {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: white;
+    background-color: dodgerblue;
+    min-height: 7rem;
+}
+
+.card {
+    position: relative;
+    
+    display: flex;
+ 
+    flex-direction: column;
+    min-height: 16rem;
+    min-width: 17rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    border: solid 0.1rem dodgerblue;
+}
+    
+
+
+.list-element {
+    list-style-type: none;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    width: 18rem;
+    font-size: 1.3rem;
+    align-self: start;
+    /* align-self: end; */
+    align-content: center;
+    min-height: 17rem;
+    justify-content: start;
+} 
+
+
+
+h1 {
+    min-height: 8vh;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: #f17ea9;
+    
+}
+
+

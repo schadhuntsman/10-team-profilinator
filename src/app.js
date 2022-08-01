@@ -6,7 +6,7 @@ const infoSave = [];
 
 const generateSite = require('../src/generate-site');
 const path = require('path');
-const css = require('./dist/style.css');
+// const css = require('./dist/style2.css');
 const Manager = require('../src/lib/Manager');
 // const Employee = require('../lib/Employee');
 const Engineer = require('../src/lib/Engineer');
