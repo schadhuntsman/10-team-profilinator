@@ -2,47 +2,60 @@
     background-color: salmon;
     text-align: center;
 }  */
- .grid-container {
-    margin-right: 3rem;
-    justify-content: center;
-    align-content: center;
-    margin: 5rem auto;
-    display: grid;
-    grid-template-columns: 20rem 20rem 20rem;
-    /* grid-row-gap: 0em; */
-    grid-column-gap: 3.5rem;
-    grid-auto-flow: row;
-    margin-left: 1.4rem;
-} 
-
- .grid-item {
-    height: 16rem;
-    width: 17rem;
+* {
+    margin: 0 auto;
 }
 
-.card-header {
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: white;
-    background-color: dodgerblue;
-    min-height: 7rem;
+
+
+.material-symbols {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48
 }
+
 
 .card {
-    position: relative;
-    
+    position: relative; 
     display: flex;
- 
     flex-direction: column;
-    min-height: 16rem;
-    min-width: 17rem;
+    height: 16rem;
+    width: 17rem;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: rgb(124, 109, 109);
     background-clip: border-box;
     border-radius: 0.25rem;
     border: solid 0.1rem dodgerblue;
 }
-    
+
+.card-header {
+    display: grid;
+    height: 5rem;
+    /* margin: 1rem; */
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: white;
+    background-color: dodgerblue;
+    /* max-height: 10rem; */
+    /* height: 9rem; */
+    width: 17rem;
+    grid-template-columns: 5rem 12rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    display: grid;
+    grid-template-rows: 2rem 2rem;
+    grid-row-gap: 1rem;
+    top: 0rem;
+    left: -1rem;
+    font-size: 2px;
+}
 
 
 .list-element {
