@@ -22,7 +22,7 @@ const teamProfilinate = (teamPrint) => {
       <div class="card">
       <div class="card-header">
       <i class="fa-thin fa-glasses"></i>Manager</div>
-      <div${manager.name}</div> <br/>
+      <div>${manager.name}</div> <br/>
 
       <ul class="list">
         <li class="list-element">ID: ${manager.id}</li>
