@@ -16,6 +16,11 @@
   'opsz' 48
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-column-gap: 1rem;
+}
 
 .card {
     position: relative; 
@@ -24,7 +29,7 @@
     height: 16rem;
     width: 17rem;
     word-wrap: break-word;
-    background-color: rgb(124, 109, 109);
+    background-color: rgb(217, 195, 195);
     background-clip: border-box;
     border-radius: 0.25rem;
     border: solid 0.1rem dodgerblue;
@@ -47,6 +52,7 @@
 }
 
 .list {
+    list-style-type: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
     display: grid;
@@ -54,21 +60,25 @@
     grid-row-gap: 1rem;
     top: 0rem;
     left: -1rem;
-    font-size: 2px;
+    font-weight: 500;
+    width: 18rem;
+    font-size: 1.2rem;
+    align-self: flex-start;
+    justify-content: start;
 }
 
 
 .list-element {
-    list-style-type: none;
+    /* list-style-type: none;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 500;
     width: 18rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     align-self: start;
     /* align-self: end; */
-    align-content: center;
-    min-height: 17rem;
-    justify-content: start;
+    /* align-content: center; */
+    /* height: 12rem; */
+    /* justify-content: start; */ 
 } 
 
 
