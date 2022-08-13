@@ -7,25 +7,28 @@
 }
 
 header {
-    height: 8rem;
+    height: 6rem;
     background-color: #f17ea9;
 }
 
 h1 {
+    position: relative;
+    justify-content: center;
     min-height: 8vh;
     color: white;
     text-align: center;
     font-size: 2.5rem;
     background-color: #f17ea9;
+    top: 2rem;
     
 }
 
 .name {
-    justify-content: center;
+    justify-content: left;
     font-size: 1.7rem;
-    margin: 0.4rem 1rem;
-    align-self: center;
+    margin: 1.2rem 1rem;
 }
+
 
 .material-symbols {
   font-variation-settings:
@@ -83,19 +86,19 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
     display: grid;
-    grid-template-rows: 2rem 2rem;
-    grid-row-gap: 1rem;
+    grid-template-rows: 2rem 2rem 2rem;
+    grid-row-gap: 2rem;
     top: 0rem;
     left: -1rem;
     font-weight: 500;
-    width: 17rem;
+    width: 16rem;
     font-size: 1.1rem;
     align-self: flex-start;
     justify-content: left;
 }
 
 .list li {
-    width: 16rem;
+    width: 14rem;
 }
 
 

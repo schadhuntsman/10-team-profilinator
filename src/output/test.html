@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
   
-  <title>Team Profilinator</title>
+  <!-- <title>Team Profilinator</title>
 </head>
 
 <body>
@@ -37,6 +37,7 @@
         <li>Office Number</li>
       </ul>
     </div>
+
       <div class="card">
       <div class="card-header">
       <span class="material-icons">rocket_launch</span>EngineerName</div>
@@ -44,25 +45,25 @@
      
       <ul class="list">
           <li>ID</li>
-          <li>Email: <span id="email">email<a href="mailto:${engineer.email}">email</a></span></li>
-          <li>Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">gitHubUsername</a></li>
+          <li>Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+          <li>Github Username: <a target="_blank" href="https://github.com/${engineer.gitHubUsername}">${engineer.gitHubUsername}</a></li>
       </ul>
       </div>
     <!-- </div> -->
 
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
             <span class="material-icons">import_contacts</span>Intern</div>
-          <div class="name">name placeholder</div> <br/>    
+          <div class="name"> ${intern.name}</div> <br/>    
 
           <ul class="list">
-              <li>ID</li>
-              <li>Email: <span id="email"><a href="mailto">intern.email</a></span></li>
-              <li>School</li>
+              <li>ID: ${intern.id}</li>
+              <li>Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+              <li>School: ${intern.school}</li>
             </ul>
         </div>
     </div>
 </div>
 
 </body>
-</html>
+</html> -->
